@@ -1,40 +1,40 @@
-  # BUAAthesis
+  # zhw thesis
 
-北航毕设论文LaTeX模板
-
-## 项目说明
-
-这是北航开源俱乐部维护的的北航毕设论文的LaTeX模板
-
-目前仍在开发中，欢迎关注进展，提交bug/issue，甚至贡献代码
-
-## 最佳实践
-
-**目前学院的要求是毕设论文必须以Word格式提交，这给使用LaTeX
-模板书写毕设论文的同学带来了诸多不便。为此，我们推荐使用在线工
-具将PDF文档转为Word格式：**
-
-[http://convertonlinefree.com/PDFToWORDEN.aspx](http://convertonlinefree.com/PDFToWORDEN.aspx)
-
-**我们已经尝试过转换一些论文文档，除目录以外其他部分转换效果很好。**
+一维流体波动的主动控制技术研究 LaTeX文件
 
 ## 依赖
 
-模板依赖v2.0及以上版本的ctex包，请使用较新版本的LaTeX发行版。
++ TeXLive 2016
++ Texmaker（Windows系统）
++ Texshop（MacOS）
 
-目前已经测试的LaTeX发行版包括：
+## 使用方法
+编辑 zhw_thesis.tex 和 data 文件夹下各章节tex文件    
+使用 xelatex 编译文件    
+使用 bibtex 编译参考文献    
 
-+ TeXLive 2015、TeXLive 2016（**推荐**）
-+ CTeX 2.9.3
+### ide使用方法    
 
-对于老版本的LaTeX发行版，请通过包管理器升级ctex的版本。
+```
+xelatex zhw_thesis.tex
+-bibtex zhw_thesis.aux
+xelatex zhw_thesis.tex
+xelatex zhw_thesis.tex
+```
 
-## From Joseph
+### 终端下使用方法     
+编译:    
 
-别的宏观的话我就不多说了，这个项目也算是填补我航在这方面的一个空缺吧。
+```
+make zhw
+```   
 
-结合我个人的一些体会，将项目拆分成以下几个部分吧，当然也有一些局限，可以及时更新补充。
+删除中间文件：    
+```
+make clean
+```
+删除全部文件：
 
-各位有兴趣的同学可以试着先看看别的大学的模板，再结合自己的理解进行code吧。
-
-再说明一点：学校给的只是论文的格式规范，并没有给出范本，所以有些格式的问题需要加上自己的理解。
+```
+make depclean
+```

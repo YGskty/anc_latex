@@ -1,8 +1,8 @@
 zhw:
-	xelatex zhw.tex
-	-bibtex zhw.aux
-	xelatex zhw.tex
-	xelatex zhw.tex
+	xelatex zhw_thesis.tex
+	-bibtex zhw_thesis.aux
+	xelatex zhw_thesis.tex
+	xelatex zhw_thesis.tex
 master:
 	xelatex sample-master.tex
 	-bibtex  sample-master.aux
